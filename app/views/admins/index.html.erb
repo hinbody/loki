@@ -1,2 +1,8 @@
-<h1>Admins#index</h1>
-<p>Find me in app/views/admins/index.html.erb</p>
+<h1>Admin Page</h1>
+<p>Please choose which data you would like to create/edit:</p>
+
+<ul>
+  <li><%= link_to "Cities", admin_cities_path %></li>
+  <li><%= link_to "Neighborhoods", admin_neighborhoods_path %></li>
+  <li><%= link_to "Locations", admin_locations_path %></li>
+</ul>
