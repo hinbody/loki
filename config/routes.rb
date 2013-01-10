@@ -1,15 +1,21 @@
 Loki2::Application.routes.draw do
+
+  root :to => 'cities#index'
+
+  #get "cities/index"
+  match '/cities', to: 'cities#index'
+
   #get "admins/index"
   match '/admin', to: 'admins#index'
 
   #get "admins/city"
-  match 'cities', to: 'admins#city'
+  match 'admin/cities', to: 'admins#city'
 
   #get "admins/neighborhood"
-  match 'neighborhoods', to: 'admins#neighborhood'
+  match 'admin/neighborhoods', to: 'admins#neighborhood'
 
   #get "admins/location"
-  match 'locations', to: 'admins#location'
+  match 'admin/locations', to: 'admins#location'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
