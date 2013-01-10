@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   def city
+    @cities = City.all
   end
 
   def neighborhood

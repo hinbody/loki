@@ -1,2 +1,9 @@
 <h1>Choose a city to view it's neighborhoods</h1>
-<p><code>Code to show all cities goes here</code></p>
+
+<ul>
+  <% @cities.each do |city| %>
+    <li>
+      <%= link_to city.name, '#'  %>
+    </li>
+  <% end %>
+</ul>
