@@ -4,9 +4,11 @@ class SalesController < ApplicationController
   end
 
   def neighborhood
+    @neighborhoods = Neighborhood.all
   end
 
   def location
+    @locations = Location.all
   end
 
   def contact

@@ -1,8 +1,25 @@
 Loki2::Application.routes.draw do
 
+  get "cities/new"
+
+  get "cities/show"
+
+  get "cities/update"
+
+  get "cities/destroy"
+
+  get "city/new"
+
+  get "city/show"
+
+  get "city/update"
+
+  get "city/destroy"
+
   root :to => 'sales#city'
 
-  get "sales/city"
+  #get "sales/city"
+  resources :cities
 
   #get "sales/neighborhood"
   match '/neighborhoods', to: 'sales#neighborhood'
