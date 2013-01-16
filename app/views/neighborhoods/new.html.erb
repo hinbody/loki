@@ -1,0 +1,11 @@
+<h1>Create a new Neighborhood</h1>
+
+<%= form_for(@neighborhood) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :city_id%>
+  <%= collection_select(:city, :id, City.all, :id, :name) %>
+  <%= f.submit "Create a new neighborhood", class: "btn btn-inverse"%>
+<% end %>

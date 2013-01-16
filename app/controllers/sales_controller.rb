@@ -1,10 +1,13 @@
 class SalesController < ApplicationController
+  def show
+    @neighborhoods = Neighborhood.find_by_id(params[:city_id])
+  end
+
   def city
     @cities = City.all
   end
 
   def neighborhood
-    @neighborhoods = Neighborhood.all
   end
 
   def location
