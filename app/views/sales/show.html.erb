@@ -1,2 +1,6 @@
 <h1>Test</h1>
-<%= collection_select(:neighborhood, :id, @neighborhoods, :id, :name) %>
+
+<% @nbhd = Neighborhood.find_by_city_id(params[:id]) %>
+<% @nbhd.each do |n| %>
+  <%= link_to n.name, n  %>
+<% end %>

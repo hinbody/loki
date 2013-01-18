@@ -5,7 +5,10 @@ class NeighborhoodsController < ApplicationController
   end
 
   def create
+    #take input from form for new neighborhood
     @neighborhood = Neighborhood.new(params[:neighborhood])
+    #trying to pull id of city chosen in form_for to assign to city_id in 
+    #the neighborhood object
     @neighborhood.city_id = params[:id]
     if @neighborhood.save
       redirect_to @neighborhood

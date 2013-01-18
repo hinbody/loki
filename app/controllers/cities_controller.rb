@@ -4,6 +4,7 @@ class CitiesController < ApplicationController
   end
   
   def create
+    #take input from form in app/views/cities/new.html.erb to apply to new city
     @city = City.new(params[:city])
     if @city.save
       redirect_to @city
