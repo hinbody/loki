@@ -6,6 +6,8 @@
   <%= f.text_field :name %>
 
   <%= f.label :city_id%>
-  <%= collection_select(:city, :id, City.all, :id, :name) %>
+  <%= f.collection_select(:city_id, City.all, :id, :name) %>
   <%= f.submit "Create a new neighborhood", class: "btn btn-inverse"%>
 <% end %>
+<%= debug(params) %>
+
