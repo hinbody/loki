@@ -1,5 +1,5 @@
 <h1>Choose a city to view it's neighborhoods</h1>
 
-<%= form_tag('/sales/neighborhood', :method => :get) %>
-  <%= collection_select(nil, :city_id, City.all, :id, :name) %>
+<%= form_tag('/sales/neighborhoods', :method => :get) %>
+  <%= collection_select(:neighborhood, :city_id, City.all, :id, :name) %>
   <%= submit_tag 'Go' %>

@@ -8,8 +8,8 @@ class SalesController < ApplicationController
   end
 
   def neighborhood
-    @neiborhood = Neighborhood.find_by_city_id(params[:city_id])
-    #redirect_to sales_neighborhoods_path
+    @nbhds = Neighborhood.where(:city_id => params[:city_id])
+    #@nbhds = Neighborhood.all
   end
 
   def location

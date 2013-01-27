@@ -1,0 +1,10 @@
+<h1>sales#neighborhood</h1>
+<ul>
+  <% @nbhds.each do |n| %>
+    <li>
+      <%= n.name %>,
+      <%= n.city_id %>
+    </li>
+  <% end %>
+</ul>
+<%= debug(params) %>
