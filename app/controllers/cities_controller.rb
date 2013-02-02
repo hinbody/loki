@@ -1,4 +1,9 @@
 class CitiesController < ApplicationController
+
+  def index
+    @cities = Neighborhood.all
+  end
+
   def new
     @city = City.new
   end

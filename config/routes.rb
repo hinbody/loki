@@ -8,6 +8,21 @@ Loki2::Application.routes.draw do
 
   resources :neighborhoods
 
+  resources :locations
+
+
+  get "locations/index"
+
+  get "locations/new"
+
+  get "locations/create"
+
+  get "locations/show"
+
+  get "locations/update"
+
+  get "locations/destroy"
+
   get "neighborhoods/create"
 
   get "neighborhoods/destroy"
