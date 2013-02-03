@@ -1,5 +1,9 @@
 <% @neighborhood.each do |nbhd| %>
-  <%= link_to nbhd.name, neighborhood_path(nbhd) %>
-  <%= nbhd.city_id %>
+  <ul>
+    <li>
+      <%= link_to nbhd.name, neighborhood_path(nbhd) %>
+      <%= nbhd.city_id %>
+    </li>
+  </ul>
 <% end %>
 <%= debug(@neighborhood) %>

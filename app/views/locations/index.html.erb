@@ -1,5 +1,9 @@
 <% @locations.each do |loc| %>
-  <%= link_to loc.name, location_path(loc) %>
-  <%= loc.neighborhood.name %>
+  <ul>
+    <li>
+      <%= link_to loc.name, location_path(loc) %>
+      <%= loc.neighborhood.name %>
+    </li>
+  </ul>
 <% end %>
 <%= debug(@location) %>
