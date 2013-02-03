@@ -8,7 +8,7 @@ class SalesController < ApplicationController
   end
 
   def neighborhood
-    @nbhds = Neighborhood.where(:city_id => params[:city_id])
+    @nbhds = Neighborhood.where(:city_id => params[:neighborhood][:city_id])
     #@nbhds = Neighborhood.all
   end
 

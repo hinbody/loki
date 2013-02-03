@@ -1,7 +1,8 @@
 <% @cities.each do |city| %>
   <ul>
     <li>
-      <%= link_to city.name, city_path(city) %>
+      <%= link_to city.name, city_path(city) %>,
+      <%= city.state %>
     </li>
   </ul>
 <% end %>
