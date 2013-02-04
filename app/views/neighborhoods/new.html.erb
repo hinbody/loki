@@ -9,5 +9,4 @@
   <%= f.collection_select(:city_id, City.all, :id, :name) %>
   <%= f.submit "Create a new neighborhood", class: "btn btn-inverse"%>
 <% end %>
-<%= debug(params) %>
 

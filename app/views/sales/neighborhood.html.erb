@@ -1,16 +1,3 @@
-<h1>sales#neighborhood</h1>
-
 <%= form_tag('/sales/locations', :method => :get) %>
 <%= collection_select(:location, :neighborhood_id, @nbhds.all, :id, :name) %>
 <%= submit_tag 'Go' %>
-
-<ul>
-  <% @nbhds.each do |n| %>
-    <li>
-      <%= n.name %>,
-      <%= n.city.name %>
-    </li>
-  <% end %>
-</ul>
-<%= debug(params) %>
-<%= debug(@nbhds) %>

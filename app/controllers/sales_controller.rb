@@ -1,6 +1,5 @@
 class SalesController < ApplicationController
   def show
-#    @neighborhoods = Neighborhood.find_by_id(params[:city_id])
   end
 
   def city
@@ -9,11 +8,11 @@ class SalesController < ApplicationController
 
   def neighborhood
     @nbhds = Neighborhood.where(:city_id => params[:neighborhood][:city_id])
-    #@nbhds = Neighborhood.all
   end
 
   def location
-    @locations = Location.all
+    @locations = Location.where(:neighborhood_id => 
+                                params[:location][:neighborhood_id])
   end
 
   def contact

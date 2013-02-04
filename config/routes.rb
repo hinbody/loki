@@ -3,6 +3,8 @@ Loki2::Application.routes.draw do
   match 'sales/neighborhoods', to: 'sales#neighborhood'
 
   match 'sales/locations', to: 'sales#location'
+   
+  match 'sales/locations/show', to: 'location#show'
 
   resources :cities
 
@@ -12,65 +14,7 @@ Loki2::Application.routes.draw do
 
   resources :locations
 
-
-  get "locations/index"
-
-  get "locations/new"
-
-  get "locations/create"
-
-  get "locations/show"
-
-  get "locations/update"
-
-  get "locations/destroy"
-
-  get "neighborhoods/create"
-
-  get "neighborhoods/destroy"
-
-  get "neighborhoods/new"
-
-  get "neighborhoods/show"
-
-  get "neighborhoods/update"
-
-  get "cities/new"
-
-  get "cities/show"
-
-  get "cities/update"
-
-  get "cities/destroy"
-
-  get "city/new"
-
-  get "city/show"
-
-  get "city/update"
-
-  get "city/destroy"
-
   root :to => 'sales#city'
-
-  #get "sales/city"
-
-  #get "sales/neighborhood"
-
-  #get "sales/location"
-  match '/locations', to: 'sales#location'
-
-  #get "sales/contact"
-  match 'contacts', to: 'sales#contact'
-
-  #get "sales/notes"
-  match 'notes', to: 'sales#notes'
-
-  #get "sales/todo"
-  match 'todos', to: 'sales#todo'
-
-  #get "cities/index"
-  match '/cities', to: 'cities#index'
 
   #get "admins/index"
   match '/admin', to: 'admins#index'
